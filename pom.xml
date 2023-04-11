@@ -8,9 +8,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fintechpath.com</groupId>
-	<artifactId>OpenApiSpecification</artifactId>
+	<artifactId>FailProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>OpenApiSpecificationDemo</name>
+	<name>FialProject</name>
 	<description>Demo project for Open API and Swagger 2</description>
 	<properties>
 		<java.version>11</java.version>
