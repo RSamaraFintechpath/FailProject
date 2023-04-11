@@ -29,13 +29,11 @@ public class UserController {
 		this.userService = userService;
 	}
 
-	
-	@PostMapping(value = "/newUser", consumes = "application/json", produces = "application/json")
-	public UserDto RestController(@RequestBody UserDto userDto) {
-		return userService.addUser(userDto);
-	}
+//	@PostMapping(value = "/newUser", consumes = "application/json", produces = "application/json")
+//	public UserDto addUser(@RequestBody UserDto x) {
+//		return userService.addUser(x);
+//	}
 
-	
 	@ApiParam(value = "the id that you insterted previously in the add endpoint", required = true)
 	@GetMapping(value = "/findby/{id}", produces = "application/json")
 	public UserDto getUserById(@PathVariable int id) {
@@ -48,14 +46,16 @@ public class UserController {
 	public void deleteById(@PathVariable int id) {
 		userService.deleteById(id);
 	}
-    
-	
+
 	@ApiOperation(value = "retrieves a list of all users", notes = "saves to h2 database which will be wiped clean if you restart the API")
 	@GetMapping(value = "/getallUsers", produces = "application/json")
 	public List<UserDto> findAllUsers() {
 		return userService.findAllUsers();
 	}
 
-	
+	@GetMapping("/number")
+	public int doSomething(int a) {
+		return 42;
+	}
 
 }
