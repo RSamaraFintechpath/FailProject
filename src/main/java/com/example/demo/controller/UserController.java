@@ -31,7 +31,7 @@ public class UserController {
 
 	
 	@PostMapping(value = "/newUser", consumes = "application/json", produces = "application/json")
-	public UserDto adduser(@RequestBody UserDto userDto) {
+	public UserDto RestController(@RequestBody UserDto userDto) {
 		return userService.addUser(userDto);
 	}
 
