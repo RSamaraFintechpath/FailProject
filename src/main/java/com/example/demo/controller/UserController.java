@@ -48,8 +48,9 @@ public class UserController {
 	public void deleteById(@PathVariable int id) {
 		userService.deleteById(id);
 	}
-
-	@ApiOperation(value = "retrieves a list of all users", notes = "saves to h2 database which will be wiped clean if you restart the API")
+    
+	@ApiOperation
+	//@ApiOperation(value = "retrieves a list of all users", notes = "saves to h2 database which will be wiped clean if you restart the API")
 	@GetMapping(value = "/getallUsers", produces = "application/json")
 	public List<UserDto> findAllUsers() {
 		return userService.findAllUsers();
