@@ -22,11 +22,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	public UserController(UserService userService) {
-
-		this.userService = userService;
-	}
-
 	@ApiParam(value = "the id that you insterted previously in the add endpoint", required = true)
 	@GetMapping(value = "/findby/{id}", produces = "application/json")
 	public UserDto getUserById(@PathVariable int id) {
