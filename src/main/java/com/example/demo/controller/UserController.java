@@ -30,7 +30,7 @@ public class UserController {
 
 	@ApiOperation(value = "deletes a user by his id", notes = "saves to h2 database which will be wiped clean if you restart the API")
 	@DeleteMapping("deletebyid/{id}")
-	@ApiParam(value = "id that was previously insterted", required = true)
+	@ApiParam
 	public void deleteById(@PathVariable int id) {
 		userService.deleteById(id);
 	}
