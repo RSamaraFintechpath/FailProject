@@ -37,11 +37,13 @@ public class UserController {
 
 	@ApiOperation(value = "retrieves a list of all users", notes = "saves to h2 database which will be wiped clean if you restart the API")
 	@GetMapping(value = "/getallUsers", produces = "application/json")
+	@ApiParam
 	public List<UserDto> findAllUsers() {
 		return userService.findAllUsers();
 	}
 
 	@GetMapping("/number")
+	@ApiParam
 	public int doSomething(int a) {
 		return 42;
 	}
