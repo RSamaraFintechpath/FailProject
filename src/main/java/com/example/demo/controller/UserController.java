@@ -43,9 +43,12 @@ public class UserController {
 	}
 
 	@GetMapping("/number")
-	@ApiParam
 	public int doSomething(int a) {
 		return 42;
+	}
+	
+	public void test() {
+		
 	}
 
 }
