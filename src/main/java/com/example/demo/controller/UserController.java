@@ -47,8 +47,8 @@ public class UserController {
 		return 42;
 	}
 	
-	public void test() {
-		
+	public void test(int s) {
+		System.out.println(s);
 	}
 
 }
